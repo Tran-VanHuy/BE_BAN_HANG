@@ -127,8 +127,10 @@ public class ProductsService {
                 item.setPrice(newProductsModel.getPrice());
                 item.setSales(newProductsModel.getSales());
                 item.setImage(newProductsModel.getImage());
+                item.setItemImage(newProductsModel.getItemImage());
                 item.setBrand(newProductsModel.getBrand());
                 item.setCategoryProductsId(newProductsModel.getCategoryProductsId());
+                item.setContent(newProductsModel.getContent());
                 return productsRepository.save(item);
             });
             return ResponseEntity.status(HttpStatus.OK).body(
